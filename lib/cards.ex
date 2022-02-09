@@ -14,10 +14,9 @@ defmodule Cards do
 
 end
 
+# start interactive elixir shell by  iex -S mix
 
-dec = Cards.create_dec
-shuffled = Cards.shuffle(dec)
+# dec = Cards.create_dec
+# shuffled = Cards.shuffle(dec)
 
-IO.puts(shuffled |> Enum.join(" "))
-
-
+# IO.puts(shuffled |> Enum.join(" "))
