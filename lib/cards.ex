@@ -31,7 +31,10 @@ defmodule Cards do
 
     #   List.flatten(cards)
 
+<<<<<<< HEAD
     # option  two
+=======
+>>>>>>> 77f4972749544fec70bdf3259df92c2b8ca39ae3
     for suit <-suits,value <- values do
         "#{value} of #{suit}"
     end
@@ -45,7 +48,11 @@ defmodule Cards do
     Enum.member?(deck, card)
   end
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 77f4972749544fec70bdf3259df92c2b8ca39ae3
 end
 
 # start interactive elixir shell by  iex -S mix
