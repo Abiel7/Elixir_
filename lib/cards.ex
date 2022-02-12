@@ -31,11 +31,10 @@ defmodule Cards do
 
     #   List.flatten(cards)
 
-
     # option  two
 
-    for suit <-suits,value <- values do
-        "#{value} of #{suit}"
+    for suit <- suits, value <- values do
+      "#{value} of #{suit}"
     end
   end
 
@@ -45,6 +44,12 @@ defmodule Cards do
 
   def contains?(deck, card) do
     Enum.member?(deck, card)
+  end
+
+  def deal(deck, hand_siz) do
+    Enum.split(deck, hand_siz) 
+
+    # returns a tuple  with two  elements
   end
 
 
