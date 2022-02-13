@@ -1,4 +1,14 @@
 defmodule Cards do
+  @moduledoc """
+  This module provides simple functions for creating and handling deck  of cards  .
+  """
+
+  @doc """
+  Creates a deck of cards.
+  
+  
+  
+  """
   def create_dec do
     values = [
       "Ace",
@@ -38,20 +48,45 @@ defmodule Cards do
     end
   end
 
+  @doc """
+  Shuffles a deck of cards by using built in  shuffle  function.
+  """
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
 
+  @doc """
+  Check if card is part  of the deck
+  
+  ## Examples
+  
+        iex> deck = Cards.create_dec
+        iex> Cards.contains?(deck, "Queen of Hearts")
+        true
+  
+  """
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
 
+  @doc """
+  Draws a card from the dec on given number of `hands_size`
+  
+  ## Example
+  
+        iex> deck = Cards.create_dec
+        iex> {hands,deck} = Cards.deal(deck, 2)
+        iex> hands
+        ["Ace of Hearts", "Two of Hearts"]
+  
+  """
   def deal(deck, hand_siz) do
     Enum.split(deck, hand_siz)
-
-    # returns a tuple  with two  elements
   end
 
+  @doc """
+    Saves  deck to a given `fileName` .
+  """
   def save(deck, fileName) do
     binary = :erlang.term_to_binary(deck)
 
@@ -59,6 +94,9 @@ defmodule Cards do
     # File.write("#{fileName}.txt", binary)
   end
 
+  @doc """
+  On given  `fileName` it loads  the deck  from the file.
+  """
   def load(fileName) do
     # option  1
     # {status, content} = File.read(fileName)
@@ -74,7 +112,10 @@ defmodule Cards do
     end
   end
 
-  # Using the pipe operator
+  @doc """
+  This function can be seen as the main  function.
+  It create deck of cards, shuffles it and then deals  it to  given  `hand_size`.
+  """
   def create_hand(hand_size) do
     Cards.create_dec()
     |> Cards.shuffle()
