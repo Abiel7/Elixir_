@@ -68,10 +68,17 @@ defmodule Cards do
     # end
 
     # option  2
-    case File.read!(fileName) do
-      {:ok,binary } -> :erlang.binary_to_term binary
-      {:error, _message } -> "The file  #{fileName}  could not be read"
+    case File.read(fileName) do
+      {:ok, binary} -> :erlang.binary_to_term(binary)
+      {:error, _message} -> "The file  #{fileName}  could not be read"
     end
+  end
+
+  # Using the pipe operator
+  def create_hand(hand_size) do
+    Cards.create_dec()
+    |> Cards.shuffle()
+    |> Cards.deal(hand_size)
   end
 end
 
@@ -86,6 +93,6 @@ end
 # two  is pont to hands and the remaining list  to  rest
 # Enum.split(dec, 2) returns  a tuple with  two  elemetns,  the list  and  count
 # with  count being at index 0 and list at index 1
-{hands, rest} = Cards.deal(Cards.create_dec() |> Cards.shuffle(), 2)
-fileName = "myfile"
+# {hands, rest} = Cards.deal(Cards.create_dec() |> Cards.shuffle(), 2)
+
 # every time  you see  = think about  the  pattern  matching
