@@ -1,6 +1,5 @@
 # Cards
 
-Learning Elixir
 
 ## Installation
 
