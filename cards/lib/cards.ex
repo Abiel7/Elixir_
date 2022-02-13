@@ -4,10 +4,7 @@ defmodule Cards do
   """
 
   @doc """
-  Creates a deck of cards.
-  
-  
-  
+  Creates a deck of cards
   """
   def create_dec do
     values = [
@@ -57,13 +54,13 @@ defmodule Cards do
 
   @doc """
   Check if card is part  of the deck
-  
+
   ## Examples
-  
+
         iex> deck = Cards.create_dec
         iex> Cards.contains?(deck, "Queen of Hearts")
         true
-  
+
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -71,14 +68,14 @@ defmodule Cards do
 
   @doc """
   Draws a card from the dec on given number of `hands_size`
-  
+
   ## Example
-  
+
         iex> deck = Cards.create_dec
         iex> {hands,deck} = Cards.deal(deck, 2)
         iex> hands
         ["Ace of Hearts", "Two of Hearts"]
-  
+
   """
   def deal(deck, hand_siz) do
     Enum.split(deck, hand_siz)
@@ -136,4 +133,4 @@ end
 # with  count being at index 0 and list at index 1
 # {hands, rest} = Cards.deal(Cards.create_dec() |> Cards.shuffle(), 2)
 
-# every time  you see  = think about  the  pattern  matching
+# every time  you see  = think about pattern  matching
