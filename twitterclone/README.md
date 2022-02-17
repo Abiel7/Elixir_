@@ -1,4 +1,7 @@
+
 # Twitterclone
+=======
+# Ridex
 
 To start your Phoenix server:
 
