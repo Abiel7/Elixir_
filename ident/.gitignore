@@ -24,3 +24,7 @@ ident-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+Dockerfile
+
+.dockerignore 

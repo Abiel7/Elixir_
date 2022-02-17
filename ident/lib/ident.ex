@@ -6,10 +6,13 @@ defmodule Ident do
   end
 
   def pick_color(image) do
-    %Ident.Image{hex: [r, g, b | _tail]} = image 
-    [r, g, b]
+    %Ident.Image{hex: [r, g, b | _tail]} = image
+
+  # Do not modify  existing data  always create a new record 
+    %Ident.Image{image | color: {r, g, b}}
   end
 
+  @spec hash_input(any) :: %Ident.Image{hex: [byte]}
   def hash_input(input) do
     %Ident.Image{
       hex:
