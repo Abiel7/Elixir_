@@ -1,4 +1,7 @@
 # Ridex
+learning Phoenix  
+
+https://medium.com/@leo_hetsch/building-a-ride-sharing-app-with-elixir-and-phoenix-channels-part-1-17bbd292aec4
 
 To start your Phoenix server:
 
