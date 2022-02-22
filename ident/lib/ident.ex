@@ -10,10 +10,12 @@ defmodule Ident do
   def build_grid(%Ident.Image{hex: hex} = image) do
     hex
     |> Enum.chunk_every(3)
+    # miror the  list use miror mirror row
     
+
   end
 
-  def miror_rows(rows) do
+  def mirror_row(rows) do
     [first,second | _tail] = rows
     rows ++ [second,first]
   end
