@@ -1,7 +1,6 @@
 # Ident
 
-**Defualt gihub profile picture creator by  using user name hash
-  **
+**Defualt gihub profile picture creator by  using user name hash**
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
