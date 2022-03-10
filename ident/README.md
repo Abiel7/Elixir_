@@ -1,6 +1,6 @@
 # Ident
 
-**Defualt gihub profile picture creator by  using user name hash code it  uses sha256 to creat the hascode **
+**Defualt gihub profile picture creator by  using user name hash code it  uses sha256 to creat the hascode**
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
