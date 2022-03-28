@@ -7,10 +7,14 @@ defmodule Ident do
     |> filter_odd
     |> build_image
     |> draw_image
-    |> save_image
+    |> save_image(input)
   end
 
-  
+
+  def save_image(image, fileName) do
+    File.write("#{fileName}.png",image)
+  end
+
 
   # draw image using erlang graphical drawer
   def draw_image(%Ident.Image{color: color, pixel_map: pixel_map}) do
@@ -18,10 +22,10 @@ defmodule Ident do
       fill = :egd.color(color)
 
       Enum.each(pixel_map, fn({start,stop})->
-          :edg.filedRectangel(image, start, stop, fill)
+          :egd.filledRectangle(image, start, stop, fill)
       end )
 
-      :edg.render(image)
+      :egd.render(image)
 
   end
 
