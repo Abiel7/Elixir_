@@ -1,5 +1,7 @@
 # App
 
+Todo App using phoneix framework 
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
